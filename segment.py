@@ -3,7 +3,7 @@ import librosa
 
 class Segment:
 
-    def __init__(self, wave_form, sr, bounds=(0, -1)):
+    def __init__(self, wave_form, sr, bounds=(None, None)):
         self.wave_form = wave_form[bounds[0]:bounds[1]]
         self.features = {}
         self.sr = sr

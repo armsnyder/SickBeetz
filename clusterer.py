@@ -8,7 +8,7 @@ class Clusterer:
 
     @staticmethod
     def label(examples, k):
-        g_means(examples)  # Work in progress
+        # g_means(examples)  # Work in progress
         centroid, label, inertia = k_means(examples, k)
         return label
 
@@ -21,4 +21,3 @@ def g_means(examples, min_k=1, max_k=10):
         for i in xrange(len(labels)):
             clusters[labels[i]].append(examples[i])
         z = [zscore(j) for j in clusters]
-        pass
